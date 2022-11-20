@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Recom</string>
+    <string name="tab_home">Home</string>
+    <string name="tab_partners">Partners</string>
+    <string name="tab_service">Service</string>
+    <string name="tab_review">Review</string>
+    <string name="tab_qna">Q&amp;A</string>
+</resources>
