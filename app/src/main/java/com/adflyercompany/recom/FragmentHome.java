@@ -4,8 +4,10 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 
 import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
@@ -15,7 +17,9 @@ import androidx.viewpager2.widget.ViewPager2;
 public class FragmentHome extends Fragment {
     private ViewPager2 sliderViewPager;
     private LinearLayout layoutIndicator;
+    private ListView list;
 
+    //  Online 이미지 로딩시 사용
 //    private String[] images = new String[] {
 //            "https://cdn.pixabay.com/photo/2019/12/26/10/44/horse-4720178_1280.jpg",
 //            "https://cdn.pixabay.com/photo/2020/11/04/15/29/coffee-beans-5712780_1280.jpg",
@@ -28,6 +32,24 @@ public class FragmentHome extends Fragment {
             R.drawable.img_home1,
             R.drawable.img_home2,
             R.drawable.img_home3
+    };
+
+    private String[] maintitle ={
+            "Title 1","Title 2",
+            "Title 3","Title 4",
+            "Title 5",
+    };
+
+    private String[] subtitle ={
+            "Sub Title 1","Sub Title 2",
+            "Sub Title 3","Sub Title 4",
+            "Sub Title 5",
+    };
+
+    private Integer[] imgid={
+            R.drawable.img_home_list1,R.drawable.img_home_list2,
+            R.drawable.img_home_list1,R.drawable.img_home_list1,
+            R.drawable.img_home_list2,
     };
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -50,6 +72,30 @@ public class FragmentHome extends Fragment {
         });
 
         setupIndicators(images.length);
+
+        CustomListAdapter adapter=new CustomListAdapter(getActivity(), maintitle, subtitle,imgid);
+        list = (ListView)v.findViewById(R.id.list);
+        list.setAdapter(adapter);
+
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view,int position, long id) {
+                // TODO Auto-generated method stub
+                if(position == 0) {
+                    // Todo
+                }else if(position == 1) {
+                    // Todo
+                }else if(position == 2) {
+                    // Todo
+                }else if(position == 3) {
+                    // Todo
+                }else if(position == 4) {
+                    // Todo
+                }
+
+            }
+        });
 
         return v;
     }
