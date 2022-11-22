@@ -28,25 +28,25 @@ public class FragmentHome extends Fragment {
 //            "https://cdn.pixabay.com/photo/2014/03/03/16/15/mosque-279015_1280.jpg"
 //    };
 
-    private Integer[] images = new Integer[] {
+    private final Integer[] images = new Integer[] {
             R.drawable.img_home1,
             R.drawable.img_home2,
             R.drawable.img_home3
     };
 
-    private String[] maintitle ={
+    private final String[] maintitle ={
             "Title 1","Title 2",
             "Title 3","Title 4",
             "Title 5",
     };
 
-    private String[] subtitle ={
+    private final String[] subtitle ={
             "Sub Title 1","Sub Title 2",
             "Sub Title 3","Sub Title 4",
             "Sub Title 5",
     };
 
-    private Integer[] imgid={
+    private final Integer[] imgid={
             R.drawable.img_home_list1,R.drawable.img_home_list2,
             R.drawable.img_home_list1,R.drawable.img_home_list1,
             R.drawable.img_home_list2,
@@ -73,7 +73,7 @@ public class FragmentHome extends Fragment {
 
         setupIndicators(images.length);
 
-        CustomListAdapter adapter=new CustomListAdapter(getActivity(), maintitle, subtitle,imgid);
+        CustomListAdapter adapter=new CustomListAdapter(getActivity(), R.layout.custom_list_home, maintitle, subtitle,imgid);
         list = (ListView)v.findViewById(R.id.list);
         list.setAdapter(adapter);
 

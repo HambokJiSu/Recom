@@ -5,4 +5,7 @@
     <string name="tab_service">Service</string>
     <string name="tab_review">Review</string>
     <string name="tab_qna">Q&amp;A</string>
+    <string name="EMPTY"></string>
+    <string name="fab_restaurant">Restaurant</string>
+    <string name="fab_fitncare">Fitness&amp;Care</string>
 </resources>

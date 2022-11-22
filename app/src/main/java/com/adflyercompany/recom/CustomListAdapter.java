@@ -14,12 +14,14 @@ public class CustomListAdapter extends ArrayAdapter<String> {
     private final String[] maintitle;
     private final String[] subtitle;
     private final Integer[] imgid;
+    private final Integer layoutId;
 
-    public CustomListAdapter(Activity context, String[] maintitle, String[] subtitle, Integer[] imgid) {
-        super(context, R.layout.custom_list, maintitle);
+    public CustomListAdapter(Activity context, Integer layoutId, String[] maintitle, String[] subtitle, Integer[] imgid) {
+        super(context, layoutId, maintitle);
         // TODO Auto-generated constructor stub
 
         this.context=context;
+        this.layoutId=layoutId;
         this.maintitle=maintitle;
         this.subtitle=subtitle;
         this.imgid=imgid;
@@ -28,7 +30,7 @@ public class CustomListAdapter extends ArrayAdapter<String> {
 
     public View getView(int position,View view,ViewGroup parent) {
         LayoutInflater inflater=context.getLayoutInflater();
-        View rowView=inflater.inflate(R.layout.custom_list, null,true);
+        View rowView=inflater.inflate(layoutId, null,true);
 
         TextView titleText = (TextView) rowView.findViewById(R.id.title);
         ImageView imageView = (ImageView) rowView.findViewById(R.id.icon);
