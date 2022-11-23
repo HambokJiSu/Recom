@@ -23,6 +23,9 @@ public class MainActivity extends AppCompatActivity {
     private FragmentReview fragReview;
     private FragmentQnA fragQnA;
 
+    private FragmentRecomResturant fragRecomResturant;
+    private FragmentRecomFitNCare fragRecomFitNCare;
+
     private TabLayout tabLayout;
 
     private boolean fabMain_status;
@@ -64,7 +67,8 @@ public class MainActivity extends AppCompatActivity {
         fabRestaurant.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Get 버튼 클릭", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(MainActivity.this, "Get 버튼 클릭", Toast.LENGTH_SHORT).show();
+                viewPager2.setCurrentItem(5, false);
             }
         });
 
@@ -72,9 +76,14 @@ public class MainActivity extends AppCompatActivity {
         fabFitNCare.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Delete 버튼 클릭", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(MainActivity.this, "Delete 버튼 클릭", Toast.LENGTH_SHORT).show();
+                viewPager2.setCurrentItem(6, false);
             }
         });
+    }
+
+    public void onLogoClick(View view){
+        viewPager2.setCurrentItem(0);
     }
 
     private void createFragment(){
@@ -83,6 +92,8 @@ public class MainActivity extends AppCompatActivity {
         fragService = new FragmentService();
         fragReview = new FragmentReview();
         fragQnA = new FragmentQnA();
+        fragRecomResturant = new FragmentRecomResturant();
+        fragRecomFitNCare = new FragmentRecomFitNCare();
     }
 
     private void createViewpager(){
@@ -93,6 +104,8 @@ public class MainActivity extends AppCompatActivity {
         fragmentStateAdapter.addFragment(fragService);
         fragmentStateAdapter.addFragment(fragReview);
         fragmentStateAdapter.addFragment(fragQnA);
+        fragmentStateAdapter.addFragment(fragRecomResturant);
+        fragmentStateAdapter.addFragment(fragRecomFitNCare);
         viewPager2.setAdapter(fragmentStateAdapter);
         viewPager2.setUserInputEnabled(false); //   스와이프로 탭 변경
     }
@@ -103,24 +116,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
-                int pos = tab.getPosition();
-                switch(pos){
-                    case 0:
-                        viewPager2.setCurrentItem(0);
-                        break;
-                    case 1:
-                        viewPager2.setCurrentItem(1);
-                        break;
-                    case 2:
-                        viewPager2.setCurrentItem(2);
-                        break;
-                    case 3:
-                        viewPager2.setCurrentItem(3);
-                        break;
-                    case 4:
-                        viewPager2.setCurrentItem(4);
-                        break;
-                }
+                viewPager2.setCurrentItem(tab.getPosition());
             }
 
             @Override
@@ -129,6 +125,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onTabReselected(TabLayout.Tab tab) {
+                viewPager2.setCurrentItem(tab.getPosition());
             }
 
         });

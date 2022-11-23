@@ -13,6 +13,7 @@
         android:layout_height="60dp"
         android:contentDescription="LOGO"
         android:src="@drawable/logo"
+        android:onClick="onLogoClick"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
