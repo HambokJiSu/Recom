@@ -1,7 +1,6 @@
 package com.adflyercompany.recom;
 
 import android.app.Activity;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,14 +8,15 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class CustomListAdapter extends ArrayAdapter<String> {
+public class CustomList2ImgAdapter extends ArrayAdapter<String> {
     private final Activity  _context;
     private final String[]  _mainTitle;
     private final String[]  _subTitle;
     private final Integer[] _imgId;
+    private final Integer[] _imgId2;
     private final Integer   _layoutId;
 
-    public CustomListAdapter(Activity context, Integer layoutId, String[] mainTitle, String[] subTitle, Integer[] imgId) {
+    public CustomList2ImgAdapter(Activity context, Integer layoutId, String[] mainTitle, String[] subTitle, Integer[] imgId, Integer[] imgId2) {
         super(context, layoutId, mainTitle);
         // TODO Auto-generated constructor stub
 
@@ -25,6 +25,7 @@ public class CustomListAdapter extends ArrayAdapter<String> {
         this._mainTitle = mainTitle;
         this._subTitle  = subTitle;
         this._imgId     = imgId;
+        this._imgId2    = imgId2;
     }
 
     public View getView(int position,View view,ViewGroup parent) {
@@ -33,10 +34,12 @@ public class CustomListAdapter extends ArrayAdapter<String> {
 
         TextView titleText      = (TextView)    rowView.findViewById(R.id.title);
         ImageView imageView     = (ImageView)   rowView.findViewById(R.id.icon);
+        ImageView imageView2    = (ImageView)   rowView.findViewById(R.id.icon2);
         TextView subtitleText   = (TextView)    rowView.findViewById(R.id.subtitle);
 
         titleText.setText(_mainTitle[position]);
         imageView.setImageResource(_imgId[position]);
+        imageView2.setImageResource(_imgId2[position]);
         subtitleText.setText(_subTitle[position]);
 
         return rowView;

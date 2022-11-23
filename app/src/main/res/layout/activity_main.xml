@@ -66,7 +66,11 @@
         android:id="@+id/txtRestaurant"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@color/design_default_color_secondary_variant"
         android:text="@string/EMPTY"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:textStyle="bold"
         app:layout_constraintTop_toTopOf="@id/fabMain"
         app:layout_constraintBottom_toBottomOf="@id/fabMain"
         app:layout_constraintStart_toStartOf="@id/fabMain"
@@ -89,12 +93,15 @@
         android:id="@+id/txtFitNCare"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@color/design_default_color_secondary_variant"
         android:text="@string/EMPTY"
-        app:layout_constraintTop_toTopOf="@id/fabMain"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@id/fabMain"
-        app:layout_constraintStart_toStartOf="@id/fabMain"
         app:layout_constraintEnd_toEndOf="@id/fabMain"
-        />
+        app:layout_constraintStart_toStartOf="@id/fabMain"
+        app:layout_constraintTop_toTopOf="@id/fabMain" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabFitNCare"
