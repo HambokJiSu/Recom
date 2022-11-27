@@ -14,6 +14,8 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager2.widget.ViewPager2;
 
+import com.adflyercompany.recom.animation.ZoomOutPageTransformer;
+
 public class FragmentHome extends Fragment {
     private ViewPager2 sliderViewPager;
     private LinearLayout layoutIndicator;
@@ -62,6 +64,7 @@ public class FragmentHome extends Fragment {
 
         sliderViewPager.setOffscreenPageLimit(1);
         sliderViewPager.setAdapter(new ImageSliderAdapter(getActivity(), images));
+        sliderViewPager.setPageTransformer(new ZoomOutPageTransformer());
 
         sliderViewPager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
             @Override

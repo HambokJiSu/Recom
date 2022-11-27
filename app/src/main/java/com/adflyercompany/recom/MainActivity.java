@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.adflyercompany.recom.animation.DepthPageTransformer;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
 
@@ -107,6 +108,7 @@ public class MainActivity extends AppCompatActivity {
         fragmentStateAdapter.addFragment(fragRecomResturant);
         fragmentStateAdapter.addFragment(fragRecomFitNCare);
         viewPager2.setAdapter(fragmentStateAdapter);
+        viewPager2.setPageTransformer(new DepthPageTransformer());
         viewPager2.setUserInputEnabled(false); //   스와이프로 탭 변경
     }
 
