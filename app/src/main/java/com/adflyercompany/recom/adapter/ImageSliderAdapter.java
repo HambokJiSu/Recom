@@ -1,4 +1,4 @@
-package com.adflyercompany.recom;
+package com.adflyercompany.recom.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.adflyercompany.recom.R;
 import com.bumptech.glide.Glide;
 
 public class ImageSliderAdapter extends RecyclerView.Adapter<ImageSliderAdapter.MyViewHolder> {

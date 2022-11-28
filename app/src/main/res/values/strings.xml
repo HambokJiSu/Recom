@@ -6,6 +6,14 @@
     <string name="tab_review">Review</string>
     <string name="tab_qna">Q&amp;A</string>
     <string name="EMPTY"></string>
-    <string name="fab_restaurant">Restaurant</string>
+    <string name="fab_restaurant">Dining</string>
     <string name="fab_fitncare">Fitness&amp;Care</string>
+    <string name="text_service_title">The Need For This Service</string>
+    <string name="text_service_subtitle1">1. A special service for overseas customers</string>
+    <string name="text_service_subtitle2">2. Time-saving</string>
+    <string name="text_service_subtitle3">3. Benefits of service</string>
+    <string name="text_service_contents1">You can avoid any linguistic or cultural barriers by choosing a service company that has natural linguistic and cultural competencies.</string>
+    <string name="text_service_contents2">While you want more than a certain level of service, it is difficult to verify each one since there are so many sources of information.
+We have curated only places that can provide foreigners with a certain level of service, regardless of the cost.</string>
+    <string name="text_service_contents3">An affiliated place will offer you favorable costs, reservations, and service. Receiving special treatment in a verified location will enhance the quality of the entire trip.</string>
 </resources>

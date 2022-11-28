@@ -1,4 +1,4 @@
-package com.adflyercompany.recom;
+package com.adflyercompany.recom.fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,43 +10,36 @@ import android.widget.ListView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-public class FragmentQnA extends Fragment {
+import com.adflyercompany.recom.adapter.CustomListAdapter;
+import com.adflyercompany.recom.R;
+
+public class FragmentPartners extends Fragment {
     private ListView list;
 
     private final String[] maintitle ={
-            "This is my first visit to Korea.\nCan I move with a guide?"
-            ,"Are group tour possible?"
-            ,"Many android applications use text view for displaying text within android applications."
-            ,"In this article, we will take a look at How to center align TextView Horizontally and Vertically in the android applications. "
-            ,"No question",
+            "Title 1","Title 2",
+            "Title 3","Title 4",
+            "Title 5",
     };
 
     private final String[] subtitle ={
-            "Welcome to Korea for.."
-            ,"Yes.\nPlease contact the manager."
-            ,"TextView widget in Android using Java with Examples"
-            ,"How to add fading TextView animation in Android"
-            ,"No Answer"
+            "Sub Title 1","Sub Title 2",
+            "Sub Title 3","Sub Title 4",
+            "Sub Title 5",
     };
 
     private final Integer[] imgid={
-            R.drawable.img_qna_list1,R.drawable.img_qna_list1,
-            R.drawable.img_qna_list1,R.drawable.img_qna_list1,
-            R.drawable.img_qna_list1,
-    };
-
-    private final Integer[] imgid2={
-            R.drawable.img_qna_list2,R.drawable.img_qna_list2,
-            R.drawable.img_qna_list2,R.drawable.img_qna_list2,
-            R.drawable.img_qna_list2,
+            R.drawable.img_partners_list1,R.drawable.img_partners_list2,
+            R.drawable.img_partners_list3,R.drawable.img_partners_list4,
+            R.drawable.img_partners_list5,
     };
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
-        View v = inflater.inflate(R.layout.fragment_qna, container, false);
+        View v = inflater.inflate(R.layout.fragment_partners, container, false);
 
-        CustomList2ImgAdapter adapter=new CustomList2ImgAdapter(getActivity(), R.layout.custom_list_qna, maintitle, subtitle,imgid, imgid2);
+        CustomListAdapter adapter=new CustomListAdapter(getActivity(), R.layout.custom_list_partners, maintitle, subtitle,imgid);
         list = (ListView)v.findViewById(R.id.list);
         list.setAdapter(adapter);
 

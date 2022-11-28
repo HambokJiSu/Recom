@@ -1,4 +1,4 @@
-package com.adflyercompany.recom;
+package com.adflyercompany.recom.adapter;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;

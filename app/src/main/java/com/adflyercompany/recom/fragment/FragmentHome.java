@@ -1,4 +1,4 @@
-package com.adflyercompany.recom;
+package com.adflyercompany.recom.fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,6 +14,9 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager2.widget.ViewPager2;
 
+import com.adflyercompany.recom.adapter.CustomListAdapter;
+import com.adflyercompany.recom.adapter.ImageSliderAdapter;
+import com.adflyercompany.recom.R;
 import com.adflyercompany.recom.animation.ZoomOutPageTransformer;
 
 public class FragmentHome extends Fragment {
@@ -31,9 +34,9 @@ public class FragmentHome extends Fragment {
 //    };
 
     private final Integer[] images = new Integer[] {
-            R.drawable.img_home1,
-            R.drawable.img_home2,
-            R.drawable.img_home3
+            R.drawable.img_home21,
+            R.drawable.img_home12,
+            R.drawable.img_home23
     };
 
     private final String[] maintitle ={
