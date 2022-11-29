@@ -1,4 +1,4 @@
-package com.adflyercompany.recom;
+package com.adflyercompany.recom.fragment;
 
 import static android.content.ContentValues.TAG;
 
@@ -17,6 +17,8 @@ import android.webkit.WebViewClient;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+
+import com.adflyercompany.recom.R;
 
 public class FragmentRecomFitNCare extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,

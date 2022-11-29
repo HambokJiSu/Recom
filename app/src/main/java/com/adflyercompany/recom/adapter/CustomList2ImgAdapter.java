@@ -1,4 +1,4 @@
-package com.adflyercompany.recom;
+package com.adflyercompany.recom.adapter;
 
 import android.app.Activity;
 import android.view.LayoutInflater;
@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.adflyercompany.recom.R;
 
 public class CustomList2ImgAdapter extends ArrayAdapter<String> {
     private final Activity  _context;

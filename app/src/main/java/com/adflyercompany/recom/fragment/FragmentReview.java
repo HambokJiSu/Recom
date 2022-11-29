@@ -1,4 +1,4 @@
-package com.adflyercompany.recom;
+package com.adflyercompany.recom.fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,33 +10,40 @@ import android.widget.ListView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-public class FragmentPartners extends Fragment {
+import com.adflyercompany.recom.adapter.CustomListAdapter;
+import com.adflyercompany.recom.R;
+
+public class FragmentReview extends Fragment {
     private ListView list;
 
     private final String[] maintitle ={
-            "Title 1","Title 2",
-            "Title 3","Title 4",
-            "Title 5",
+            "GoodGoodGoodGoodGoodGoodGoodGoodGoodGoodGoodGoodGoodGoodGoodGoodGood"
+            ,"NiceNiceNiceNiceNiceNiceNiceNiceNiceNiceNiceNiceNiceNice"
+            ,"SosoSosoSosoSosoSosoSosoSosoSosoSosoSosoSosoSosoSosoSosoSoso"
+            ,"Not badNot badNot badNot badNot badNot badNot badNot badNot bad"
+            ,"No comment",
     };
 
     private final String[] subtitle ={
-            "Sub Title 1","Sub Title 2",
-            "Sub Title 3","Sub Title 4",
-            "Sub Title 5",
+            "Da-on/Seoul"
+            ,"Su-ho/Suji"
+            ,"Meerket/Zoo"
+            ,"Raccon/Zoo"
+            ,"Ji-ho/Suji"
     };
 
     private final Integer[] imgid={
-            R.drawable.img_partners_list1,R.drawable.img_partners_list2,
-            R.drawable.img_partners_list3,R.drawable.img_partners_list4,
-            R.drawable.img_partners_list5,
+            R.drawable.img_review_list1,R.drawable.img_review_list2,
+            R.drawable.img_review_list3,R.drawable.img_review_list4,
+            R.drawable.img_review_list5,
     };
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
-        View v = inflater.inflate(R.layout.fragment_partners, container, false);
+        View v = inflater.inflate(R.layout.fragment_review, container, false);
 
-        CustomListAdapter adapter=new CustomListAdapter(getActivity(), R.layout.custom_list_partners, maintitle, subtitle,imgid);
+        CustomListAdapter adapter=new CustomListAdapter(getActivity(), R.layout.custom_list_review, maintitle, subtitle,imgid);
         list = (ListView)v.findViewById(R.id.list);
         list.setAdapter(adapter);
 
