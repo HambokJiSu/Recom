@@ -82,20 +82,18 @@ public class MainActivity extends AppCompatActivity {
                 viewPager2.setCurrentItem(6, false);
             }
         });
-
-        viewPager2.setCurrentItem(4);
     }
 
     public void onLogoClick(View view){
-        viewPager2.setCurrentItem(0);
+        viewPager2.setCurrentItem(0, false);
     }
 
     public void onRestaurantClick(View view){
-        viewPager2.setCurrentItem(5);
+        viewPager2.setCurrentItem(5, false);
     }
 
     public void onFitNCareClick(View view){
-        viewPager2.setCurrentItem(6);
+        viewPager2.setCurrentItem(6, false);
     }
 
     private void createFragment(){
@@ -157,9 +155,9 @@ public class MainActivity extends AppCompatActivity {
 
         }else {                 // 플로팅 액션 버튼 열기
             // 애니메이션 추가
-            ObjectAnimator fc_animation = ObjectAnimator.ofFloat(fabRestaurant, "translationY", -400f);
+            ObjectAnimator fc_animation = ObjectAnimator.ofFloat(fabRestaurant, "translationY", -340f);
             fc_animation.start();
-            ObjectAnimator fe_animation = ObjectAnimator.ofFloat(fabFitNCare, "translationY", -200f);
+            ObjectAnimator fe_animation = ObjectAnimator.ofFloat(fabFitNCare, "translationY", -170f);
             fe_animation.start();
             // 메인 플로팅 이미지 변경
             fabMain.setImageResource(android.R.drawable.ic_delete);

@@ -10,10 +10,13 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
-        android:layout_height="60dp"
+        android:layout_height="50dp"
         android:contentDescription="LOGO"
-        android:src="@drawable/logo"
+        android:src="@drawable/logo3"
         android:onClick="onLogoClick"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:scaleType="fitStart"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -22,10 +25,13 @@
         app:layout_constraintTop_toBottomOf="@id/imageView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
         app:tabIndicatorColor="@color/tab_selected"
         app:tabSelectedTextColor="@color/white"
         app:tabTextColor="@color/black"
+        app:tabTextAppearance="@style/tab_text"
         app:tabBackground="@drawable/bg_tab_select"
         tools:layout_editor_absoluteY="108dp">
 
@@ -50,6 +56,26 @@
             android:text="@string/tab_qna" />
 
     </com.google.android.material.tabs.TabLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:background="@color/tab_selected"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        app:layout_constraintStart_toStartOf="@id/tabs"
+        app:layout_constraintTop_toTopOf="@id/tabs"
+        />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:background="@color/tab_selected"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        app:layout_constraintBottom_toBottomOf="@id/tabs"
+        app:layout_constraintTop_toBottomOf="@id/tabs"
+        />
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPager"

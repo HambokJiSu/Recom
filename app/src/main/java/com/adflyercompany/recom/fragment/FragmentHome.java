@@ -52,9 +52,9 @@ public class FragmentHome extends Fragment {
     };
 
     private final Integer[] imgid={
-            R.drawable.img_home_list1,R.drawable.img_home_list2,
-            R.drawable.img_home_list1,R.drawable.img_home_list1,
-            R.drawable.img_home_list2,
+            R.drawable.img_partners_list1,R.drawable.img_partners_list2,
+            R.drawable.img_partners_list3,R.drawable.img_partners_list4,
+            R.drawable.img_partners_list5,
     };
 
     public View onCreateView(@NonNull LayoutInflater inflater,

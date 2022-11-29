@@ -10,103 +10,121 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
         android:layout_margin="15dp"
         android:text="@string/tab_service"
-        android:textStyle="bold"
+        android:textAppearance="@style/fragment_text"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         />
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
+    <ImageView
+        android:id="@+id/imageView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:layout_height="430dp"
+        android:layout_margin="10dp"
+        android:contentDescription="LOGO"
+        android:background="@drawable/bg_service5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textView">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        app:layout_constraintBottom_toTopOf="@id/btnResturant"
+        />
+<!--    android:scaleType="centerCrop"-->
+<!--    android:backgroundTint="#90ffffff"-->
+<!--    android:backgroundTintMode="src_over"-->
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_margin="10dp"
-            android:text="@string/text_service_title"
-            android:textSize="25sp"
-            android:textStyle="bold"
-            android:textColor="@color/black"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:text="@string/text_service_subtitle1"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            android:textColor="@color/black"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:layout_marginStart="25dp"
-            android:layout_marginEnd="10dp"
-            android:text="@string/text_service_contents1"
-            android:textColor="@color/black"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:text="@string/text_service_subtitle2"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            android:textColor="@color/black"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="25dp"
-            android:layout_marginEnd="10dp"
-            android:text="@string/text_service_contents2"
-            android:textColor="@color/black"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:text="@string/text_service_subtitle3"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            android:textColor="@color/black"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="25dp"
-            android:layout_marginEnd="10dp"
-            android:text="@string/text_service_contents3"
-            android:textColor="@color/black"
-            />
+    <!--    <LinearLayout-->
+<!--        android:id="@+id/linearLayout"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/textView">-->
 
-    </LinearLayout>
+<!--&lt;!&ndash;        <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_gravity="center_horizontal"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_margin="10dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:text="@string/text_service_title"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:textSize="25sp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:textStyle="bold"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:textColor="@color/black"&ndash;&gt;-->
+<!--&lt;!&ndash;            />&ndash;&gt;-->
+<!--        <TextView-->
+<!--            android:id="@+id/textview_first"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:layout_marginRight="10dp"-->
+<!--            android:text="@string/text_service_subtitle1"-->
+<!--            android:textSize="15sp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textColor="@color/black"-->
+<!--            />-->
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="5dp"-->
+<!--            android:layout_marginStart="25dp"-->
+<!--            android:layout_marginEnd="10dp"-->
+<!--            android:text="@string/text_service_contents1"-->
+<!--            android:textColor="@color/black"-->
+<!--            />-->
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="30dp"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:layout_marginRight="10dp"-->
+<!--            android:text="@string/text_service_subtitle2"-->
+<!--            android:textSize="15sp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textColor="@color/black"-->
+<!--            />-->
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="25dp"-->
+<!--            android:layout_marginEnd="10dp"-->
+<!--            android:text="@string/text_service_contents2"-->
+<!--            android:textColor="@color/black"-->
+<!--            />-->
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="30dp"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:layout_marginEnd="10dp"-->
+<!--            android:text="@string/text_service_subtitle3"-->
+<!--            android:textSize="15sp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textColor="@color/black"-->
+<!--            />-->
+<!--        <TextView-->
+<!--            android:id="@+id/textview_last"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="25dp"-->
+<!--            android:layout_marginEnd="10dp"-->
+<!--            android:layout_marginBottom="20dp"-->
+<!--            android:text="@string/text_service_contents3"-->
+<!--            android:textColor="@color/black"-->
+<!--            />-->
+
+<!--    </LinearLayout>-->
 
     <Button
         android:id="@+id/btnResturant"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/fab_restaurant"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:layout_marginStart="50dp"
-        android:background="@drawable/bg_round"
         android:onClick="onRestaurantClick"
-        app:layout_constraintTop_toBottomOf="@id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@id/imageView"
         app:layout_constraintStart_toStartOf="parent"
         />
 
@@ -115,11 +133,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/fab_fitncare"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="50dp"
-        android:background="@drawable/bg_round"
         android:onClick="onFitNCareClick"
-        app:layout_constraintTop_toBottomOf="@id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
         />
 

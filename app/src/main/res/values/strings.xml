@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Recom</string>
-    <string name="tab_home">Home</string>
-    <string name="tab_partners">Partners</string>
+    <string name="tab_home">Popular Service</string>
+    <string name="tab_partners">Partner</string>
     <string name="tab_service">Service</string>
     <string name="tab_review">Review</string>
     <string name="tab_qna">Q&amp;A</string>
@@ -16,4 +16,7 @@
     <string name="text_service_contents2">While you want more than a certain level of service, it is difficult to verify each one since there are so many sources of information.
 We have curated only places that can provide foreigners with a certain level of service, regardless of the cost.</string>
     <string name="text_service_contents3">An affiliated place will offer you favorable costs, reservations, and service. Receiving special treatment in a verified location will enhance the quality of the entire trip.</string>
+    <string name="text_review_title1">In response to the question, I received a restaurant recommendation that was appropriate for my situation.</string>
+    <string name="text_review_title2">It was important to me to have a unique experience in Korea instead of the obvious ones, and I received assistance with that task.</string>
+    <string name="text_review_title3">The amount of information is overwhelming, making a choice can be overwhelming, but I managed to make a simple choice.</string>
 </resources>
