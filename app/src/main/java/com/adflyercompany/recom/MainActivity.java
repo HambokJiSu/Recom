@@ -119,6 +119,15 @@ public class MainActivity extends AppCompatActivity {
         viewPager2.setAdapter(fragmentStateAdapter);
         viewPager2.setPageTransformer(new DepthPageTransformer());
         viewPager2.setUserInputEnabled(false); //   스와이프로 탭 변경
+        viewPager2.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
+            @Override
+            public void onPageSelected(int position) {
+                super.onPageSelected(position);
+
+                if (position == 5 || position == 6)
+                    tabLayout.setScrollPosition(0, 1, true);
+            }
+        });
     }
 
     private void settingTabLayout(){
