@@ -19,4 +19,23 @@ We have curated only places that can provide foreigners with a certain level of 
     <string name="text_review_title1">In response to the question, I received a restaurant recommendation that was appropriate for my situation.</string>
     <string name="text_review_title2">It was important to me to have a unique experience in Korea instead of the obvious ones, and I received assistance with that task.</string>
     <string name="text_review_title3">The amount of information is overwhelming, making a choice can be overwhelming, but I managed to make a simple choice.</string>
+    <string name="text_review_title4">It cannot be said that you can get the truth by going to the local area, but the closest you get to the truth is to go to the local area.</string>
+    <string name="text_partner_title1">Blue Roof Town</string>
+    <string name="text_partner_title2">HS-CLIINIC</string>
+    <string name="text_partner_title3">JAMESKILL ZYM</string>
+    <string name="text_partner_title4">Myeongdong Gyoja</string>
+    <string name="text_partner_subtitle1">This is an American Koreatown style restaurant. You can enjoy the taste of meat in a healthy way with special seasoning.</string>
+    <string name="text_partner_subtitle2">This is the place to pursue natural beauty. Take care of your beauty safely through a delicate expert.</string>
+    <string name="text_partner_subtitle3">This gym even takes care of the little things you need to work out. It keeps creating special events for our customers here, so stay tuned.</string>
+    <string name="text_partner_subtitle4">Myeongdong Gyoja is a specialty restaurant of Kalguksu opened in 1966. I visited it because it was famous enough to appear in Michelin Guide, a world-famous food guidebook.</string>
+    <string name="text_qna_title1">1.Are all the places you recommend able to communicate in English?</string>
+    <string name="text_qna_title2">2. Are there any benefits if I go through VIP KOREA?</string>
+    <string name="text_qna_title3">3. Can I recommend some places?</string>
+    <string name="text_qna_title4">4. Are there package products?</string>
+    <string name="text_qna_title5">5. How to create a custom packaging experience?</string>
+    <string name="text_qna_subtitle1">Yes, that\'s right. Basically, we recommend places where you can communicate in English. Other languages are also available at some vendors. Even if they are not fluent in the language, they know how to communicate with foreigners.</string>
+    <string name="text_qna_subtitle2">All places do not have a set of benefits, but we are trying to increase the benefits gradually. When you visit these places, if you tell them that you came through VIP KOREA, you will be able to get a little more management.</string>
+    <string name="text_qna_subtitle3">Of course it\'s possible. If you have experienced a service at a places in Korea you would recommend, please let us know. We will recommend it in our app and promote it to be affiliated.</string>
+    <string name="text_qna_subtitle4">As of now, we are planning a package service that will allow you to experience satisfactory service evenly while increasing the number of affiliates. We will provide meals, beauty treatments, lodging, entertainment, and treatment services.</string>
+    <string name="text_qna_subtitle5">Many elements must work in tandem when creating a well-designed branded packaging and unboxing experience, but you don’t have to include every available option.</string>
 </resources>

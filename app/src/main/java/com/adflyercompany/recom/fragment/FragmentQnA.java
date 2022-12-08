@@ -16,29 +16,21 @@ import com.adflyercompany.recom.R;
 public class FragmentQnA extends Fragment {
     private ListView list;
 
-    private final String[] maintitle ={
-            "This is my first visit to Korea.\nCan I move with a guide?"
-            ,"Are group tour possible?"
-            ,"Many android applications use text view for displaying text within android applications."
-            ,"In this article, we will take a look at How to center align TextView Horizontally and Vertically in the android applications. "
-            ,"No question",
+    private String[] mainTitle ={
+
     };
 
-    private final String[] subtitle ={
-            "Welcome to Korea for.."
-            ,"Yes.\nPlease contact the manager."
-            ,"TextView widget in Android using Java with Examples"
-            ,"How to add fading TextView animation in Android"
-            ,"No Answer"
+    private String[] subTitle ={
+
     };
 
-    private final Integer[] imgid={
+    private final Integer[] imgId={
             R.drawable.img_qna_list1,R.drawable.img_qna_list1,
             R.drawable.img_qna_list1,R.drawable.img_qna_list1,
             R.drawable.img_qna_list1,
     };
 
-    private final Integer[] imgid2={
+    private final Integer[] imgId2={
             R.drawable.img_qna_list2,R.drawable.img_qna_list2,
             R.drawable.img_qna_list2,R.drawable.img_qna_list2,
             R.drawable.img_qna_list2,
@@ -49,7 +41,23 @@ public class FragmentQnA extends Fragment {
 
         View v = inflater.inflate(R.layout.fragment_qna, container, false);
 
-        CustomList2ImgAdapter adapter=new CustomList2ImgAdapter(getActivity(), R.layout.custom_list_qna, maintitle, subtitle,imgid, imgid2);
+        mainTitle = new String[]{
+                getActivity().getString(R.string.text_qna_title1)
+                ,getActivity().getString(R.string.text_qna_title2)
+                ,getActivity().getString(R.string.text_qna_title3)
+                ,getActivity().getString(R.string.text_qna_title4)
+                ,getActivity().getString(R.string.text_qna_title5)
+        };
+
+        subTitle = new String[]{
+                getActivity().getString(R.string.text_qna_subtitle1)
+                ,getActivity().getString(R.string.text_qna_subtitle2)
+                ,getActivity().getString(R.string.text_qna_subtitle3)
+                ,getActivity().getString(R.string.text_qna_subtitle4)
+                ,getActivity().getString(R.string.text_qna_subtitle5)
+        };
+
+        CustomList2ImgAdapter adapter=new CustomList2ImgAdapter(getActivity(), R.layout.custom_list_qna, mainTitle, subTitle,imgId, imgId2);
         list = (ListView)v.findViewById(R.id.list);
         list.setAdapter(adapter);
 
@@ -66,10 +74,7 @@ public class FragmentQnA extends Fragment {
                     // Todo
                 }else if(position == 3) {
                     // Todo
-                }else if(position == 4) {
-                    // Todo
                 }
-
             }
         });
 

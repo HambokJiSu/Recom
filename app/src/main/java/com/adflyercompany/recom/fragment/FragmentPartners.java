@@ -16,22 +16,17 @@ import com.adflyercompany.recom.R;
 public class FragmentPartners extends Fragment {
     private ListView list;
 
-    private final String[] maintitle ={
-            "Title 1","Title 2",
-            "Title 3","Title 4",
-            "Title 5",
+    private String[] mainTitle ={
     };
 
-    private final String[] subtitle ={
-            "Sub Title 1","Sub Title 2",
-            "Sub Title 3","Sub Title 4",
-            "Sub Title 5",
+    private String[] subTitle ={
     };
 
-    private final Integer[] imgid={
-            R.drawable.img_partners_list1,R.drawable.img_partners_list2,
-            R.drawable.img_partners_list3,R.drawable.img_partners_list4,
-            R.drawable.img_partners_list5,
+    private final Integer[] imgId={
+            R.drawable.img_partner_list11
+            ,R.drawable.img_partner_list12
+            ,R.drawable.img_partner_list13
+            ,R.drawable.img_partner_list14
     };
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -39,7 +34,21 @@ public class FragmentPartners extends Fragment {
 
         View v = inflater.inflate(R.layout.fragment_partners, container, false);
 
-        CustomListAdapter adapter=new CustomListAdapter(getActivity(), R.layout.custom_list_partners, maintitle, subtitle,imgid);
+        mainTitle = new String[] {
+                 getString(R.string.text_partner_title1)
+                ,getString(R.string.text_partner_title2)
+                ,getString(R.string.text_partner_title3)
+                ,getString(R.string.text_partner_title4)
+        };
+
+        subTitle = new String[] {
+                getString(R.string.text_partner_subtitle1)
+                ,getString(R.string.text_partner_subtitle2)
+                ,getString(R.string.text_partner_subtitle3)
+                ,getString(R.string.text_partner_subtitle4)
+        };
+
+        CustomListAdapter adapter=new CustomListAdapter(getActivity(), R.layout.custom_list_partners, mainTitle, subTitle,imgId);
         list = (ListView)v.findViewById(R.id.list);
         list.setAdapter(adapter);
 

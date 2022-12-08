@@ -10,6 +10,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.adflyercompany.recom.R;
+import com.google.android.material.imageview.ShapeableImageView;
+import com.google.android.material.shape.CornerFamily;
 
 public class CustomListAdapter extends ArrayAdapter<String> {
     private final Activity  _context;
@@ -34,12 +36,27 @@ public class CustomListAdapter extends ArrayAdapter<String> {
         View rowView=inflater.inflate(_layoutId, null,true);
 
         TextView titleText      = (TextView)    rowView.findViewById(R.id.title);
-        ImageView imageView     = (ImageView)   rowView.findViewById(R.id.icon);
-        TextView subtitleText   = (TextView)    rowView.findViewById(R.id.subtitle);
-
         titleText.setText(_mainTitle[position]);
-        imageView.setImageResource(_imgId[position]);
+
+        TextView subtitleText   = (TextView)    rowView.findViewById(R.id.subtitle);
         subtitleText.setText(_subTitle[position]);
+
+        ShapeableImageView simageView;
+        ImageView imageView;
+
+        if (_layoutId == R.layout.custom_list_partners) {
+            simageView = (ShapeableImageView) rowView.findViewById(R.id.icon);
+            simageView.setShapeAppearanceModel(simageView.getShapeAppearanceModel()
+                    .toBuilder()
+                    .setTopRightCorner(CornerFamily.ROUNDED, 50)
+                    .setTopLeftCorner(CornerFamily.ROUNDED, 50)
+                    .build());
+            simageView.setImageResource(_imgId[position]);
+        }
+        else {
+            imageView = (ImageView) rowView.findViewById(R.id.icon);
+            imageView.setImageResource(_imgId[position]);
+        }
 
         return rowView;
     };
