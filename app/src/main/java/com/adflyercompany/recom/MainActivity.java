@@ -47,6 +47,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // 주석 테스트
+
+        /*
+        니러ㅏㅣ나얼
+        ㄴ어ㅏㅣ렁나ㅣㄹ
+        ㅣㄴ아러ㅏㅣㅇㄹ
+        이ㅏ러이
+        */
+
         createFragment();
 
         createViewpager();
