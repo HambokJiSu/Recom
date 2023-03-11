@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.animation.ObjectAnimator;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -47,15 +48,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // 주석 테스트
-
-        /*
-        니러ㅏㅣ나얼
-        ㄴ어ㅏㅣ렁나ㅣㄹ
-        ㅣㄴ아러ㅏㅣㅇㄹ
-        이ㅏ러이
-        */
-
         createFragment();
 
         createViewpager();
@@ -95,6 +87,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void onLogoClick(View view){
         viewPager2.setCurrentItem(0, false);
+    }
+
+    public void onLoginClick(View view){
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
     }
 
     public void onRestaurantClick(View view){

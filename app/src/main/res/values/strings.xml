@@ -38,4 +38,13 @@ We have curated only places that can provide foreigners with a certain level of 
     <string name="text_qna_subtitle3">Of course it\'s possible. If you have experienced a service at a places in Korea you would recommend, please let us know. We will recommend it in our app and promote it to be affiliated.</string>
     <string name="text_qna_subtitle4">As of now, we are planning a package service that will allow you to experience satisfactory service evenly while increasing the number of affiliates. We will provide meals, beauty treatments, lodging, entertainment, and treatment services.</string>
     <string name="text_qna_subtitle5">Many elements must work in tandem when creating a well-designed branded packaging and unboxing experience, but you don’t have to include every available option.</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
 </resources>

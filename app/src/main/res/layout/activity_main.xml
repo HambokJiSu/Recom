@@ -20,6 +20,29 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/labelWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome Chan"
+        android:textStyle="bold"
+        android:layout_marginRight="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/imageLogin" />
+
+    <ImageView
+        android:id="@+id/imageLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:contentDescription="LOGO"
+        android:src="@drawable/baseline_logout"
+        android:onClick="onLoginClick"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="5dp"
+        android:scaleType="fitEnd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabs"
         app:layout_constraintTop_toBottomOf="@id/imageView"
@@ -119,5 +142,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
