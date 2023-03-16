@@ -21,25 +21,40 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/labelWelcome"
+        android:id="@+id/txtWelcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Welcome Chan"
         android:textStyle="bold"
         android:layout_marginRight="5dp"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/imageLogin" />
+        app:layout_constraintTop_toTopOf="@id/imageLogIn" />
 
     <ImageView
-        android:id="@+id/imageLogin"
+        android:id="@+id/imageLogIn"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:contentDescription="LOGO"
-        android:src="@drawable/baseline_logout"
+        android:src="@drawable/baseline_login_24"
         android:onClick="onLoginClick"
         android:layout_marginTop="15dp"
         android:layout_marginRight="5dp"
         android:scaleType="fitEnd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageLogOut"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:contentDescription="LOGO"
+        android:src="@drawable/baseline_logout"
+        android:onClick="onLogoutClick"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="5dp"
+        android:scaleType="fitEnd"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

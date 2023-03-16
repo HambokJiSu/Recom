@@ -71,5 +71,5 @@ We have curated only places that can provide foreigners with a certain level of 
     <string name="welcome">"Welcome !"</string>
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
-    <string name="login_failed">"Login failed"</string>
+    <string name="login_failed">"ID or password do not match"</string>
 </resources>

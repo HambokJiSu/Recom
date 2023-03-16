@@ -7,6 +7,7 @@ import android.animation.ObjectAnimator;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.adflyercompany.recom.adapter.FragmentStateAdapter;
@@ -43,6 +44,13 @@ public class MainActivity extends AppCompatActivity {
     private FloatingActionButton fabRestaurant;
     private FloatingActionButton fabFitNCare;
 
+
+    private TextView txtWelcome;
+
+
+    private ImageView imgLogIn;
+    private ImageView imgLogOut;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,6 +65,10 @@ public class MainActivity extends AppCompatActivity {
         fabMain = findViewById(R.id.fabMain);
         fabRestaurant = findViewById(R.id.fabRestaurant);
         fabFitNCare = findViewById(R.id.fabFitNCare);
+
+        txtWelcome = (TextView) findViewById(R.id.txtWelcome);
+        imgLogIn = (ImageView) findViewById(R.id.imageLogIn);
+        imgLogOut = (ImageView) findViewById(R.id.imageLogOut);
 
         // 메인플로팅 버튼 클릭
         fabMain.setOnClickListener(new View.OnClickListener() {
@@ -85,6 +97,24 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        Intent intent = getIntent();
+
+        if ("S".equals(intent.getStringExtra("login"))) {
+            txtWelcome.setVisibility(View.VISIBLE);
+            imgLogIn.setVisibility(View.INVISIBLE);
+            imgLogOut.setVisibility(View.VISIBLE);
+        }
+        else {
+            txtWelcome.setVisibility(View.INVISIBLE);
+            imgLogIn.setVisibility(View.VISIBLE);
+            imgLogOut.setVisibility(View.INVISIBLE);
+        }
+    }
+
     public void onLogoClick(View view){
         viewPager2.setCurrentItem(0, false);
     }
@@ -92,6 +122,12 @@ public class MainActivity extends AppCompatActivity {
     public void onLoginClick(View view){
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
+    }
+
+    public void onLogoutClick(View view){
+        txtWelcome.setVisibility(View.INVISIBLE);
+        imgLogIn.setVisibility(View.VISIBLE);
+        imgLogOut.setVisibility(View.INVISIBLE);
     }
 
     public void onRestaurantClick(View view){
