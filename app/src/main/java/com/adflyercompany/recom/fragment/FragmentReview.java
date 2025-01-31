@@ -16,26 +16,18 @@ import com.adflyercompany.recom.R;
 public class FragmentReview extends Fragment {
     private ListView list;
 
-    private final String[] maintitle ={
-            "GoodGoodGoodGoodGoodGoodGoodGoodGoodGoodGoodGoodGoodGoodGoodGoodGood"
-            ,"NiceNiceNiceNiceNiceNiceNiceNiceNiceNiceNiceNiceNiceNice"
-            ,"SosoSosoSosoSosoSosoSosoSosoSosoSosoSosoSosoSosoSosoSosoSoso"
-            ,"Not badNot badNot badNot badNot badNot badNot badNot badNot bad"
-            ,"No comment",
+    private String[] mainTitle;
+
+    private final String[] subTitle ={
+            "Adela/Nova Scotia"
+            ,"Bruno/Delaware"
+            ,"Joanna/Kentucky"
+            ,"Leo/New York"
     };
 
-    private final String[] subtitle ={
-            "Da-on/Seoul"
-            ,"Su-ho/Suji"
-            ,"Meerket/Zoo"
-            ,"Raccon/Zoo"
-            ,"Ji-ho/Suji"
-    };
-
-    private final Integer[] imgid={
-            R.drawable.img_review_list1,R.drawable.img_review_list2,
-            R.drawable.img_review_list3,R.drawable.img_review_list4,
-            R.drawable.img_review_list5,
+    private final Integer[] imgId={
+            R.drawable.img_review_list11,R.drawable.img_review_list12,
+            R.drawable.img_review_list13,R.drawable.img_review_list14
     };
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -43,7 +35,14 @@ public class FragmentReview extends Fragment {
 
         View v = inflater.inflate(R.layout.fragment_review, container, false);
 
-        CustomListAdapter adapter=new CustomListAdapter(getActivity(), R.layout.custom_list_review, maintitle, subtitle,imgid);
+        mainTitle = new String[]{
+                getActivity().getString(R.string.text_review_title1)
+                , getActivity().getString(R.string.text_review_title2)
+                , getActivity().getString(R.string.text_review_title3)
+                , getActivity().getString(R.string.text_review_title4)
+        };
+
+        CustomListAdapter adapter=new CustomListAdapter(getActivity(), R.layout.custom_list_review, mainTitle, subTitle,imgId);
         list = (ListView)v.findViewById(R.id.list);
         list.setAdapter(adapter);
 
@@ -58,12 +57,7 @@ public class FragmentReview extends Fragment {
                     // Todo
                 }else if(position == 2) {
                     // Todo
-                }else if(position == 3) {
-                    // Todo
-                }else if(position == 4) {
-                    // Todo
                 }
-
             }
         });
 

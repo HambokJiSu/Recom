@@ -4,8 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.animation.ObjectAnimator;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.adflyercompany.recom.adapter.FragmentStateAdapter;
@@ -42,6 +44,13 @@ public class MainActivity extends AppCompatActivity {
     private FloatingActionButton fabRestaurant;
     private FloatingActionButton fabFitNCare;
 
+
+    private TextView txtWelcome;
+
+
+    private ImageView imgLogIn;
+    private ImageView imgLogOut;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,6 +65,10 @@ public class MainActivity extends AppCompatActivity {
         fabMain = findViewById(R.id.fabMain);
         fabRestaurant = findViewById(R.id.fabRestaurant);
         fabFitNCare = findViewById(R.id.fabFitNCare);
+
+        txtWelcome = (TextView) findViewById(R.id.txtWelcome);
+        imgLogIn = (ImageView) findViewById(R.id.imageLogIn);
+        imgLogOut = (ImageView) findViewById(R.id.imageLogOut);
 
         // 메인플로팅 버튼 클릭
         fabMain.setOnClickListener(new View.OnClickListener() {
@@ -82,20 +95,47 @@ public class MainActivity extends AppCompatActivity {
                 viewPager2.setCurrentItem(6, false);
             }
         });
+    }
 
-        viewPager2.setCurrentItem(4);
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        Intent intent = getIntent();
+
+        if ("S".equals(intent.getStringExtra("login"))) {
+            txtWelcome.setVisibility(View.VISIBLE);
+            imgLogIn.setVisibility(View.INVISIBLE);
+            imgLogOut.setVisibility(View.VISIBLE);
+        }
+        else {
+            txtWelcome.setVisibility(View.INVISIBLE);
+            imgLogIn.setVisibility(View.VISIBLE);
+            imgLogOut.setVisibility(View.INVISIBLE);
+        }
     }
 
     public void onLogoClick(View view){
-        viewPager2.setCurrentItem(0);
+        viewPager2.setCurrentItem(0, false);
+    }
+
+    public void onLoginClick(View view){
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
+    }
+
+    public void onLogoutClick(View view){
+        txtWelcome.setVisibility(View.INVISIBLE);
+        imgLogIn.setVisibility(View.VISIBLE);
+        imgLogOut.setVisibility(View.INVISIBLE);
     }
 
     public void onRestaurantClick(View view){
-        viewPager2.setCurrentItem(5);
+        viewPager2.setCurrentItem(5, false);
     }
 
     public void onFitNCareClick(View view){
-        viewPager2.setCurrentItem(6);
+        viewPager2.setCurrentItem(6, false);
     }
 
     private void createFragment(){
@@ -121,6 +161,15 @@ public class MainActivity extends AppCompatActivity {
         viewPager2.setAdapter(fragmentStateAdapter);
         viewPager2.setPageTransformer(new DepthPageTransformer());
         viewPager2.setUserInputEnabled(false); //   스와이프로 탭 변경
+        viewPager2.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
+            @Override
+            public void onPageSelected(int position) {
+                super.onPageSelected(position);
+
+                if (position == 5 || position == 6)
+                    tabLayout.setScrollPosition(0, 1, true);
+            }
+        });
     }
 
     private void settingTabLayout(){
@@ -157,9 +206,9 @@ public class MainActivity extends AppCompatActivity {
 
         }else {                 // 플로팅 액션 버튼 열기
             // 애니메이션 추가
-            ObjectAnimator fc_animation = ObjectAnimator.ofFloat(fabRestaurant, "translationY", -400f);
+            ObjectAnimator fc_animation = ObjectAnimator.ofFloat(fabRestaurant, "translationY", -340f);
             fc_animation.start();
-            ObjectAnimator fe_animation = ObjectAnimator.ofFloat(fabFitNCare, "translationY", -200f);
+            ObjectAnimator fe_animation = ObjectAnimator.ofFloat(fabFitNCare, "translationY", -170f);
             fe_animation.start();
             // 메인 플로팅 이미지 변경
             fabMain.setImageResource(android.R.drawable.ic_delete);
